@@ -1,4 +1,4 @@
-This project demonstrates a simple REST API implementation for reactive programming using Spring Boot, R2DBC, and MySQL. The tutorial focuses on creating non-blocking, asynchronous APIs to manage student data.
+#### This project demonstrates a simple REST API implementation for reactive programming using Spring Boot, R2DBC, and MySQL. The tutorial focuses on creating non-blocking, asynchronous APIs to manage student data.
 
 #### Features
 1. RESTful API for managing student records
@@ -12,11 +12,11 @@ This project demonstrates a simple REST API implementation for reactive programm
 3. MySQL Server
 
 #### Technologies Used
-Spring Boot 3.4.1
-Spring WebFlux: For building reactive REST APIs
-R2DBC: Reactive database connectivity
-MySQL: Database
-Flyway: Database schema migration tool
+Spring Boot 3.4.1<br>
+Spring WebFlux: For building reactive REST APIs<br>
+R2DBC: Reactive database connectivity<br>
+MySQL: Database<br>
+Flyway: Database schema migration tool<br>
 Lombok: Simplifies Java code with annotations
 
 #### API Endpoints
