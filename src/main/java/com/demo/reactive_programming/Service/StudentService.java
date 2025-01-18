@@ -30,4 +30,18 @@ public class StudentService {
     public Mono<Void> deleteById(String id) {
         return studentRepository.deleteById(Integer.valueOf(id));
     }
+
+    public Mono<Student> update(Student student) {
+        return studentRepository.findById(student.getId()) // Find the student by ID
+                .flatMap(existingStudent -> {
+                    // Update fields of the existing student
+                    existingStudent.setFname(student.getFname());
+                    existingStudent.setLname(student.getLname());
+                    existingStudent.setAge(student.getAge());
+                    // Save the updated student back to the repository
+                    return studentRepository.save(existingStudent);
+                })
+                .switchIfEmpty(Mono.error(new RuntimeException("Student not found with id: " + student.getId())));
+    }
+
 }
